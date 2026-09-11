@@ -17,7 +17,16 @@ def generate_log(data):
     # STEP 4: Print a confirmation message
     print(f"Log written to {filename}")
 
-    return filename
+    def main():
+    post = fetch_data()
+
+    print(
+        "Fetched Post Title:",
+        post.get("title", "No title found")
+    )
+
+    write_log(post)
 
 
-    
+if __name__ == "__main__":
+    main()
